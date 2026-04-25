@@ -95,18 +95,19 @@ export default function Hero() {
             <div className="inline-flex items-center gap-2 bg-[var(--accent)]/10 text-[var(--accent)] px-4 py-2 rounded-full mb-6">
               <Star size={16} fill="currentColor" />
               <span className="text-sm font-semibold">
-                Premium Kalite, Taze Urunler
+                Premium Keyfiyyət, Təzə məhsullar
               </span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold leading-tight mb-6">
-              Dogann En <span className="gradient-text">Degerli</span> Hazinesi
+              Təbiətin ən <span className="gradient-text">dəyərli</span>{" "}
+              xəzinəsi
             </h1>
 
             <p className="text-lg sm:text-xl text-[var(--muted)] mb-8 max-w-xl">
-              Osmanli doneminden bu yana geleneksel lezzetler, bugunun
-              teknolojisiyle bulusuyor. En kaliteli cerezleri kapiniza kadar
-              getiriyoruz.
+              Osmanlı dövründən bu yana gələn ənənəvi ləzzətlər müasir
+              texnologiya ilə birləşir. Ən keyfiyyətli çərəzləri qapınıza qədər
+              çatdırırıq.
             </p>
 
             <div className="flex flex-wrap gap-4 mb-12">
@@ -114,23 +115,32 @@ export default function Hero() {
                 href="/products"
                 className="btn-primary inline-flex items-center gap-2"
               >
-                Alisverise Basla
+                Alış-verişə başla
                 <ArrowRight size={18} />
               </Link>
+
               <Link href="/about" className="btn-secondary">
-                Hikayemizi Oku
+                Hekayəmizi oxu
               </Link>
             </div>
 
             {/* Trust Badges */}
             <div className="flex flex-wrap gap-6">
               {[
-                { icon: Truck, label: "Ucretsiz Kargo", sub: "100 TL Uzeri" },
-                { icon: Shield, label: "Guvenli Odeme", sub: "256-bit SSL" },
+                {
+                  icon: Truck,
+                  label: "Pulsuz çatdırılma",
+                  sub: "100 AZN-dən yuxarı",
+                },
+                {
+                  icon: Shield,
+                  label: "Təhlükəsiz ödəniş",
+                  sub: "256-bit SSL",
+                },
                 {
                   icon: Award,
-                  label: "Kalite Garantisi",
-                  sub: "%100 Memnuniyet",
+                  label: "Keyfiyyət zəmanəti",
+                  sub: "100% məmnuniyyət",
                 },
               ].map((badge, i) => (
                 <div key={i} className="flex items-center gap-3">
@@ -170,7 +180,7 @@ export default function Hero() {
                 <div className="w-full h-full rounded-full overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1599599810769-bcde5a160d32?w=600"
-                    alt="Premium Cerez"
+                    alt="Premium çərəz"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -183,10 +193,8 @@ export default function Hero() {
                     4.9
                   </div>
                   <div>
-                    <p className="font-semibold">Musteri Puani</p>
-                    <p className="text-xs text-[var(--muted)]">
-                      2,500+ degerlendirme
-                    </p>
+                    <p className="font-semibold">Müştəri reytinqi</p>
+                    <p className="text-xs text-[var(--muted)]">2,500+ rəy</p>
                   </div>
                 </div>
               </div>
@@ -200,9 +208,9 @@ export default function Hero() {
                     24h
                   </div>
                   <div>
-                    <p className="font-semibold">Hizli Teslimat</p>
+                    <p className="font-semibold">Sürətli çatdırılma</p>
                     <p className="text-xs text-[var(--muted)]">
-                      Ayni gun kargo
+                      Eyni gün kargo
                     </p>
                   </div>
                 </div>

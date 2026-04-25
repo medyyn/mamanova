@@ -20,10 +20,10 @@ export default async function ProductsPage({
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">
-            Tum Urunler
+            Bütün Məhsullar
           </h1>
           <p className="text-[var(--muted)] text-lg">
-            {filteredProducts.length} urun bulundu
+            {filteredProducts.length} məhsul tapıldı
           </p>
         </div>
 
@@ -37,7 +37,7 @@ export default async function ProductsPage({
                 : "bg-[var(--bg-warm)] hover:bg-[var(--accent)]/10"
             }`}
           >
-            Tumu
+            Hamısı
           </a>
           {categories.map((cat) => (
             <a
@@ -64,8 +64,7 @@ export default async function ProductsPage({
         {filteredProducts.length === 0 && (
           <div className="text-center py-20">
             <p className="text-xl text-[var(--muted)]">
-              Bu kategoride urun bulunamadi.
-            </p>
+              Bu kategoriyada məhsul tapılmadı</p>
           </div>
         )}
       </div>

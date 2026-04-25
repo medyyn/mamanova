@@ -11,6 +11,7 @@ import {
   FaPhone,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+
 export default function Footer() {
   return (
     <footer className="bg-[#1A1A1A] text-white">
@@ -20,20 +21,20 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <h3 className="text-2xl font-serif font-bold mb-2">
-                Bultenimize Abone Olun
+                Bültenimizə Abunə olun
               </h3>
               <p className="text-white/80">
-                Kampanyalardan ve yeniliklerden ilk siz haberdar olun
+                Kampaniyalardan və yeniliklərdən ilk siz xəbərdar olun
               </p>
             </div>
             <div className="flex w-full md:w-auto gap-3">
               <input
                 type="email"
-                placeholder="E-posta adresiniz"
+                placeholder="E-poçt ünvanınız"
                 className="flex-1 md:w-80 px-5 py-3 rounded-full text-[var(--fg)] focus:outline-none focus:ring-2 focus:ring-white"
               />
               <button className="px-6 py-3 bg-white text-[var(--accent)] font-semibold rounded-full hover:bg-[var(--bg-warm)] transition-colors">
-                Abone Ol
+                Abunə ol
               </button>
             </div>
           </div>
@@ -54,14 +55,14 @@ export default function Footer() {
                 </div>
                 <div>
                   <h4 className="text-xl font-serif font-bold">
-                    Osmanli Cerez
+                    Osmanlı Çərəz
                   </h4>
-                  <p className="text-sm text-gray-400">Premium Quality</p>
+                  <p className="text-sm text-gray-400">Premium Keyfiyyət</p>
                 </div>
               </div>
               <p className="text-gray-400 mb-6">
-                Geleneksel lezzetler, modern sunum. 1990'dan bu yana kaliteyi
-                tescilli olarak tuketicilerimize sunuyoruz.
+                Ənənəvi ləzzətlər, müasir təqdimat. 1990-cı ildən bu yana
+                keyfiyyəti təsdiqlənmiş şəkildə müştərilərimizə təqdim edirik.
               </p>
               <div className="flex gap-3">
                 {[FaFacebook, FaInstagram, FaTwitter, FaYoutube].map(
@@ -80,14 +81,14 @@ export default function Footer() {
 
             {/* Quick Links */}
             <div>
-              <h4 className="text-lg font-semibold mb-6">Hizli Erisim</h4>
+              <h4 className="text-lg font-semibold mb-6">Sürətli keçid</h4>
               <ul className="space-y-3">
                 {[
-                  { label: "Ana Sayfa", href: "/" },
-                  { label: "Urunler", href: "/products" },
-                  { label: "Hakkimizda", href: "/about" },
+                  { label: "Ana səhifə", href: "/" },
+                  { label: "Məhsullar", href: "/products" },
+                  { label: "Haqqımızda", href: "/about" },
                   { label: "Blog", href: "/blog" },
-                  { label: "Iletisim", href: "/contact" },
+                  { label: "Əlaqə", href: "/contact" },
                 ].map((link) => (
                   <li key={link.href}>
                     <Link
@@ -103,9 +104,9 @@ export default function Footer() {
 
             {/* Categories */}
             <div>
-              <h4 className="text-lg font-semibold mb-6">Kategoriler</h4>
+              <h4 className="text-lg font-semibold mb-6">Kateqoriyalar</h4>
               <ul className="space-y-3">
-                {["Fistik", "Badem", "Ceviz", "Pekmez", "Findik", "Helva"].map(
+                {["Fıstıq", "Badam", "Qoz", "Bəkməz", "Fındıq", "Halva"].map(
                   (cat) => (
                     <li key={cat}>
                       <Link
@@ -122,14 +123,17 @@ export default function Footer() {
 
             {/* Contact */}
             <div>
-              <h4 className="text-lg font-semibold mb-6">Iletisim</h4>
+              <h4 className="text-lg font-semibold mb-6">Əlaqə</h4>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
-                  <FaMapMarkerAlt className="text-[var(--accent)] mt-1" size={18} />
+                  <FaMapMarkerAlt
+                    className="text-[var(--accent)] mt-1"
+                    size={18}
+                  />
                   <span className="text-gray-400">
-                    Osmanli Cerez Merkezi
+                    Osmanlı Çərəz Mərkəzi
                     <br />
-                    Istanbul, Turkiye
+                    İstanbul, Türkiyə
                   </span>
                 </li>
                 <li className="flex items-center gap-3">
@@ -158,13 +162,13 @@ export default function Footer() {
           <div className="border-t border-white/10 mt-12 pt-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <p className="text-gray-400 text-sm">
-                &copy; 2024 Osmanli Cerez. Tum hakları saklıdır.
+                &copy; 2024 Osmanlı Çərəz. Bütün hüquqlar qorunur.
               </p>
               <div className="flex gap-6">
                 {[
-                  "Gizlilik Politikasi",
-                  "Kullanim Sartlari",
-                  "Iade Politikasi",
+                  "Məxfilik siyasəti",
+                  "İstifadə şərtləri",
+                  "Geri qaytarma siyasəti",
                 ].map((item) => (
                   <Link
                     key={item}

@@ -14,9 +14,9 @@ export default function CartPage() {
         <div className="w-24 h-24 rounded-full bg-[var(--bg-warm)] mx-auto mb-6 flex items-center justify-center">
           <ShoppingBag size={40} className="text-[var(--muted)]" />
         </div>
-        <h1 className="text-2xl font-serif font-bold mb-4">Sepetiniz Bos</h1>
+        <h1 className="text-2xl font-serif font-bold mb-4">Səbətiniz Boşdur</h1>
         <p className="text-[var(--muted)] mb-8">
-          Sepetinizde henuz urun bulunmamaktadir.
+          Səbətinizdə hal-hazırda məhsul yoxdur.
         </p>
         <Link
           href="/products"
@@ -33,7 +33,7 @@ export default function CartPage() {
     <div className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-3xl md:text-4xl font-serif font-bold mb-8">
-          Sepetim ({items.length} urun)
+          Səbətim ({items.length} məhsul)
         </h1>
 
         <div className="grid lg:grid-cols-3 gap-8">
@@ -103,44 +103,44 @@ export default function CartPage() {
               onClick={clearCart}
               className="text-sm text-[var(--muted)] hover:text-[var(--accent)] underline"
             >
-              Sepeti Temizle
+              Səbəti Təmizlə
             </button>
           </div>
 
           {/* Summary */}
           <div className="lg:col-span-1">
             <div className="bg-white rounded-2xl p-6 shadow-sm sticky top-24">
-              <h2 className="text-xl font-semibold mb-6">Siparis Ozeti</h2>
+              <h2 className="text-xl font-semibold mb-6">Sifariş xülasəsi</h2>
 
               <div className="space-y-3 pb-6 border-b border-[var(--border)]">
                 <div className="flex justify-between text-sm">
-                  <span className="text-[var(--muted)]">Ara Toplam</span>
+                  <span className="text-[var(--muted)]">Aralıq Cəmi</span>
                   <span>{total} TL</span>
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-[var(--muted)]">Kargo</span>
                   <span className="text-[var(--teal)]">
-                    {total >= 100 ? "Ucretsiz" : "30 TL"}
+                    {total >= 100 ? "Pulsuz" : "30 azn"}
                   </span>
                 </div>
               </div>
 
               <div className="flex justify-between py-6 border-b border-[var(--border)]">
-                <span className="font-semibold">Toplam</span>
+                <span className="font-semibold">Cəmi</span>
                 <span className="text-2xl font-bold text-[var(--accent)]">
-                  {total >= 100 ? total : total + 30} TL
+                  {total >= 100 ? total : total + 30} azn
                 </span>
               </div>
 
               <button className="btn-primary w-full mt-6">
-                Siparisi Tamamla
+                Sifarişi Tamamla
               </button>
 
               <Link
                 href="/products"
                 className="block text-center text-sm text-[var(--muted)] hover:text-[var(--accent)] mt-4"
               >
-                Alisverise Devam Et
+                Alışverişə dəvam et
               </Link>
             </div>
           </div>

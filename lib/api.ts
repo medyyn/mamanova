@@ -14,6 +14,7 @@ const API_BASE = 'https://admin.bazaristo.shop/api';
 //         return getMockProducts();
 //     }
 // }
+
 export async function getProducts(): Promise<Product[]> {
     return getMockProducts();
 }
@@ -43,6 +44,7 @@ export async function getProduct(id: string): Promise<Product | null> {
 //         return getMockCategories();
 //     }
 // }
+
 export async function getCategories(): Promise<Category[]> {
     return getMockCategories();
 }
@@ -52,12 +54,12 @@ function getMockProducts(): Product[] {
     return [
         {
             id: '1',
-            name: 'Premium Antep Fistigi',
-            description: 'Elde toplanmis, taze ve kaliteli Antep fistigi. Mutfaginizin vazgecilmezi.',
-            price: 185,
+            name: 'Premium Antep Fıstığı',
+            description: 'Əllə toplanmış, təzə və keyfiyyətli Antep fıstığı. Mətbəxinizin vazkeçilməzi.',
+            price: 85,
             originalPrice: 220,
             image: 'https://www.nestlegoodnes.com/ph/sites/default/files/styles/3_2_1920px_width/public/2024-04/The%20Pistachio%20Sho.jpeg.webp?itok=NZB_g9nQ',
-            category: 'fistik',
+            category: 'fıstıq',
             stock: 150,
             rating: 4.8,
             reviews: 234,
@@ -65,11 +67,11 @@ function getMockProducts(): Product[] {
         },
         {
             id: '2',
-            name: 'Organik Badem',
-            description: 'Dogal ve organik yetistirilen saglikli bademler. Protein deposu.',
-            price: 165,
+            name: 'Orqanik Badam',
+            description: 'Təbii və orqanik yetişdirilən sağlam badamlar. Protein deposu.',
+            price: 35,
             image: 'https://images.unsplash.com/photo-1508061253366-f7da158b6d46?w=600',
-            category: 'badem',
+            category: 'badam',
             stock: 200,
             rating: 4.9,
             reviews: 189,
@@ -77,23 +79,23 @@ function getMockProducts(): Product[] {
         },
         {
             id: '3',
-            name: 'Hindistan Cevizi',
-            description: 'Bol miktarda ceviz ici, taze ve lezzetli.',
-            price: 145,
+            name: 'Hindistan qozu',
+            description: 'Bol miqdarda qoz içi, təzə və ləzzətli.',
+            price: 25,
             originalPrice: 175,
             image: 'https://www.birbes.com/wp-content/uploads/2018/07/Hindistan-Cevizi-Nedir-Faydalar%C4%B1-Ve-Zararlar%C4%B1-Nelerdir-750x375.jpg',
-            category: 'ceviz',
+            category: 'qoz',
             stock: 180,
             rating: 4.7,
             reviews: 156,
         },
         {
             id: '4',
-            name: 'Karadut Pekmezi',
-            description: 'Geleneksel yontemle uretilen, organik karadut pekmezi.',
-            price: 95,
+            name: 'Qaragilə bəkməzi',
+            description: 'Ənənəvi üsulla istehsal olunan orqanik qaragilə bəkməzi.',
+            price: 60,
             image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600',
-            category: 'pekmez',
+            category: 'bəkməz',
             stock: 85,
             rating: 4.6,
             reviews: 98,
@@ -101,11 +103,11 @@ function getMockProducts(): Product[] {
         },
         {
             id: '5',
-            name: 'Findik Ezmesi',
-            description: '%100 dogal findik, sekersiz ve katkisiz.',
-            price: 125,
+            name: 'Fındıq pastası',
+            description: '%100 təbii fındıq, şəkərsiz və qatqısız.',
+            price: 50,
             image: 'https://www.hacibabakuruyemis.com/cdn/shop/articles/sekersiz-fistik-ezmesi.jpg?v=1564732191&width=1000',
-            category: 'findik',
+            category: 'fındıq',
             stock: 120,
             rating: 4.8,
             reviews: 267,
@@ -113,9 +115,9 @@ function getMockProducts(): Product[] {
         },
         {
             id: '6',
-            name: 'Kaju Cevizi',
-            description: 'Taze kavrulmus, çitir kaju cevizleri.',
-            price: 195,
+            name: 'Kaju qozu',
+            description: 'Təzə qovrulmuş, xırtıldayan kaju qozları.',
+            price: 43,
             originalPrice: 230,
             image: 'https://narayanjigajakwale.in/cdn/shop/files/Cashwe-180-No.jpg?v=1727454538',
             category: 'kaju',
@@ -125,22 +127,22 @@ function getMockProducts(): Product[] {
         },
         {
             id: '7',
-            name: 'Susam Helvasi',
-            description: 'Geleneksel tarifle yapilan, yumusak dokulu helva.',
-            price: 75,
+            name: 'Susam halvası',
+            description: 'Ənənəvi reseptlə hazırlanmış yumşaq teksturalı halva.',
+            price: 15,
             image: 'https://i.lezzet.com.tr/images-xxlarge-recipe/susam_helvasi-40ea2654-3300-4bff-b31f-f2ba4fd287c2.jpg',
-            category: 'helva',
+            category: 'halva',
             stock: 200,
             rating: 4.7,
             reviews: 145,
         },
         {
             id: '8',
-            name: 'Leblebi',
-            description: 'Samsun leblebisi, hafif tuzlu ve çitir.',
-            price: 45,
+            name: 'Ləbləbi',
+            description: 'Samsun ləbləbisi, yüngül duzlu və xırtıldayan.',
+            price: 25,
             image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Leblebi.jpg/330px-Leblebi.jpg',
-            category: 'leblebi',
+            category: 'ləbləbi',
             stock: 300,
             rating: 4.4,
             reviews: 89,
@@ -151,11 +153,11 @@ function getMockProducts(): Product[] {
 
 function getMockCategories(): Category[] {
     return [
-        { id: '1', name: 'Fistik', slug: 'fistik', image: 'https://images.unsplash.com/photo-1525201548942-d8732f6617a0?w=300', productCount: 12 },
-        { id: '2', name: 'Badem', slug: 'badem', image: 'https://images.unsplash.com/photo-1508061253366-f7da158b6d46?w=300', productCount: 8 },
-        { id: '3', name: 'Ceviz', slug: 'ceviz', image: 'https://images.unsplash.com/photo-1563412885-bb328049c37a?w=300', productCount: 15 },
-        { id: '4', name: 'Pekmez', slug: 'pekmez', image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=300', productCount: 6 },
-        { id: '5', name: 'Findik', slug: 'findik', image: 'https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?w=300', productCount: 10 },
-        { id: '6', name: 'Helva', slug: 'helva', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300', productCount: 5 },
+        { id: '1', name: 'Fıstıq', slug: 'fıstıq', image: 'https://www.nestlegoodnes.com/ph/sites/default/files/styles/3_2_1920px_width/public/2024-04/The%20Pistachio%20Sho.jpeg.webp?itok=NZB_g9nQ', productCount: 12 },
+        { id: '2', name: 'Badam', slug: 'badam', image: 'https://images.unsplash.com/photo-1508061253366-f7da158b6d46?w=300', productCount: 8 },
+        { id: '3', name: 'Hindistan Qozu', slug: 'hindistan qozu', image: 'https://www.birbes.com/wp-content/uploads/2018/07/Hindistan-Cevizi-Nedir-Faydalar%C4%B1-Ve-Zararlar%C4%B1-Nelerdir-750x375.jpg', productCount: 15 },
+        { id: '4', name: 'Bəkməz', slug: 'bəkməz', image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=300', productCount: 6 },
+        { id: '5', name: 'Kaju', slug: 'kaju', image: 'https://narayanjigajakwale.in/cdn/shop/files/Cashwe-180-No.jpg?v=1727454538', productCount: 10 },
+        { id: '6', name: 'Halva', slug: 'halva', image: 'https://i.lezzet.com.tr/images-xxlarge-recipe/susam_helvasi-40ea2654-3300-4bff-b31f-f2ba4fd287c2.jpg', productCount: 5 },
     ];
 }

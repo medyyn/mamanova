@@ -23,10 +23,10 @@ export default function CategoryNav({ categories }: CategoryNavProps) {
       <div className="max-w-7xl mx-auto">
         <div className="section-title">
           <span className="inline-block px-4 py-1 bg-[var(--gold)]/10 text-[var(--gold)] rounded-full text-sm font-semibold mb-4">
-            Kategoriler
+            Kateqoriyalar
           </span>
-          <h2>Kategorilere Gore Kesfet</h2>
-          <p>Aradiginiz lezzeti kategoriye gore kolayca bulun</p>
+          <h2>Kateqoriyalara görə kəşf et</h2>
+          <p>Axtardığınız ləzzəti kateqoriyaya görə asanlıqla tapın</p>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -49,7 +49,7 @@ export default function CategoryNav({ categories }: CategoryNavProps) {
                   {category.name}
                 </h3>
                 <span className="text-sm opacity-90">
-                  {category.productCount} urun
+                  {category.productCount} məhsul
                 </span>
               </div>
             </Link>

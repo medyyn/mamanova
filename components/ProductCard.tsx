@@ -52,7 +52,7 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
           )}
           {product.featured && (
             <span className="px-3 py-1 bg-[var(--gold)] text-white text-sm font-semibold rounded-full">
-              One Cikan
+              Seçilmiş
             </span>
           )}
         </div>
@@ -73,24 +73,26 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
                 ? "bg-[var(--accent)] text-white scale-110"
                 : "bg-white text-[var(--fg)] hover:bg-[var(--accent)] hover:text-white"
             }`}
-            aria-label="Add to wishlist"
+            aria-label="Seçilmişlərə əlavə et"
           >
             <Heart size={20} fill={isLiked ? "currentColor" : "none"} />
           </button>
+
           <button
             onClick={(e) => {
               e.preventDefault();
               addItem(product);
             }}
             className="w-12 h-12 rounded-full bg-white text-[var(--fg)] flex items-center justify-center hover:bg-[var(--accent)] hover:text-white transition-all transform hover:scale-110"
-            aria-label="Add to cart"
+            aria-label="Səbətə əlavə et"
           >
             <ShoppingCart size={20} />
           </button>
+
           <Link
             href={`/product/${product.id}`}
             className="w-12 h-12 rounded-full bg-white text-[var(--fg)] flex items-center justify-center hover:bg-[var(--accent)] hover:text-white transition-all transform hover:scale-110"
-            aria-label="View product"
+            aria-label="Məhsula bax"
           >
             <Eye size={20} />
           </Link>
@@ -134,11 +136,12 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
         {/* Price */}
         <div className="flex items-center gap-3">
           <span className="text-xl font-bold text-[var(--accent)]">
-            {product.price} TL
+            {product.price} AZN
           </span>
+
           {product.originalPrice && (
             <span className="text-sm text-[var(--muted)] line-through">
-              {product.originalPrice} TL
+              {product.originalPrice} AZN
             </span>
           )}
         </div>
@@ -147,15 +150,15 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
         <div className="mt-3">
           {product.stock > 10 ? (
             <span className="text-sm text-[var(--teal)] font-medium">
-              Stokta mevcut
+              Stokda mövcuddur
             </span>
           ) : product.stock > 0 ? (
             <span className="text-sm text-[var(--gold)] font-medium">
-              Son {product.stock} urun!
+              Son {product.stock} məhsul!
             </span>
           ) : (
             <span className="text-sm text-[var(--accent)] font-medium">
-              Tukendi
+              Tükəndi
             </span>
           )}
         </div>

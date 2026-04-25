@@ -29,9 +29,9 @@ export default async function ProductPage({
   if (!product) {
     return (
       <div className="pt-32 pb-16 text-center">
-        <h1 className="text-2xl">Urun bulunamadi</h1>
+        <h1 className="text-2xl">Məhsul Tapılmadı</h1>
         <Link href="/products" className="text-[var(--accent)]">
-          Urunlere don
+          Məhsullara geri qayıd
         </Link>
       </div>
     );
@@ -52,7 +52,7 @@ export default async function ProductPage({
                 href="/"
                 className="text-[var(--muted)] hover:text-[var(--accent)]"
               >
-                Ana Sayfa
+                Ana Səhifə
               </Link>
             </li>
             <li className="text-[var(--muted)]">/</li>
@@ -61,7 +61,7 @@ export default async function ProductPage({
                 href="/products"
                 className="text-[var(--muted)] hover:text-[var(--accent)]"
               >
-                Urunler
+                Məhsullar
               </Link>
             </li>
             <li className="text-[var(--muted)]">/</li>
@@ -101,7 +101,7 @@ export default async function ProductPage({
             <div className="flex items-center gap-3 mb-4">
               {product.featured && (
                 <span className="px-3 py-1 bg-[var(--gold)] text-white text-sm font-semibold rounded-full">
-                  One Cikan
+                  Önə çıxarılan
                 </span>
               )}
               {product.isNew && (
@@ -136,7 +136,7 @@ export default async function ProductPage({
                   ))}
                 </div>
                 <span className="text-sm text-[var(--muted)]">
-                  {product.rating} ({product.reviews} degerlendirme)
+                  {product.rating} ({product.reviews} Qiymətləndirmə)
                 </span>
               </div>
             )}
@@ -147,11 +147,11 @@ export default async function ProductPage({
 
             <div className="flex items-baseline gap-4 mb-8">
               <span className="text-4xl font-bold text-[var(--accent)]">
-                {product.price} TL
+                {product.price} azn
               </span>
               {product.originalPrice && (
                 <span className="text-xl text-[var(--muted)] line-through">
-                  {product.originalPrice} TL
+                  {product.originalPrice} azn
                 </span>
               )}
             </div>
@@ -162,13 +162,13 @@ export default async function ProductPage({
             {/* Features */}
             <div className="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-[var(--border)]">
               {[
-                { icon: Truck, label: "Ucretsiz Kargo", sub: "100 TL uzeri" },
+                { icon: Truck, label: "Pulsuz Kargo", sub: "30 azn üstü" },
                 {
                   icon: Shield,
-                  label: "Guvenli Odeme",
-                  sub: "SSL sertifikasi",
+                  label: "Təhlükəsiz ödəmə",
+                  sub: "SSL sertifikatı",
                 },
-                { icon: RotateCcw, label: "Kolay Iade", sub: "14 gun icinde" },
+                { icon: RotateCcw, label: "Asand İadə", sub: "14 gün ərzində" },
               ].map((item, i) => (
                 <div key={i} className="text-center">
                   <item.icon className="w-8 h-8 mx-auto mb-2 text-[var(--accent)]" />
@@ -184,7 +184,7 @@ export default async function ProductPage({
         {relatedProducts.length > 0 && (
           <div>
             <h2 className="text-2xl font-serif font-bold mb-8 text-center">
-              Benzer Urunler
+              Oxşar Məhsullar
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {relatedProducts.map((p, i) => (

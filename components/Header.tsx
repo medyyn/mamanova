@@ -36,10 +36,10 @@ export default function Header() {
             </div>
             <div className="hidden sm:block">
               <h1 className="text-xl font-serif font-bold text-[var(--fg)]">
-                Osmanli Cerez
+                Osmanlı Çərəz
               </h1>
               <p className="text-xs text-[var(--muted)] -mt-1">
-                Premium Quality
+                Premium Keyfiyyət
               </p>
             </div>
           </Link>
@@ -47,11 +47,11 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {[
-              { href: "/", label: "Ana Sayfa" },
-              { href: "/products", label: "Urunler" },
-              { href: "/products?category=featured", label: "One Cikanlar" },
-              { href: "/about", label: "Hakkimizda" },
-              { href: "/contact", label: "Iletisim" },
+              { href: "/", label: "Ana səhifə" },
+              { href: "/products", label: "Məhsullar" },
+              { href: "/products?category=featured", label: "Seçilmişlər" },
+              { href: "/about", label: "Haqqımızda" },
+              { href: "/contact", label: "Əlaqə" },
             ].map((link) => (
               <Link
                 key={link.href}
@@ -70,7 +70,7 @@ export default function Header() {
             <button
               onClick={() => setIsSearchOpen(!isSearchOpen)}
               className="w-10 h-10 rounded-full bg-[var(--bg-warm)] flex items-center justify-center hover:bg-[var(--accent)] hover:text-white transition-all"
-              aria-label="Search"
+              aria-label="Axtarış"
             >
               <Search size={18} />
             </button>
@@ -78,7 +78,7 @@ export default function Header() {
             {/* Wishlist */}
             <button
               className="hidden sm:flex w-10 h-10 rounded-full bg-[var(--bg-warm)] items-center justify-center hover:bg-[var(--gold)] hover:text-white transition-all"
-              aria-label="Wishlist"
+              aria-label="Seçilmişlər"
             >
               <Heart size={18} />
             </button>
@@ -99,7 +99,7 @@ export default function Header() {
             {/* User */}
             <button
               className="hidden sm:flex w-10 h-10 rounded-full bg-[var(--bg-warm)] items-center justify-center hover:bg-[var(--teal)] hover:text-white transition-all"
-              aria-label="Account"
+              aria-label="Hesab"
             >
               <User size={18} />
             </button>
@@ -108,7 +108,7 @@ export default function Header() {
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="lg:hidden w-10 h-10 rounded-full bg-[var(--bg-warm)] flex items-center justify-center"
-              aria-label="Menu"
+              aria-label="Menyu"
             >
               {isMobileMenuOpen ? <X size={18} /> : <Menu size={18} />}
             </button>
@@ -124,7 +124,7 @@ export default function Header() {
           <div className="relative">
             <input
               type="text"
-              placeholder="Urun ara..."
+              placeholder="Məhsul axtar..."
               className="w-full py-3 px-5 pr-12 rounded-full border-2 border-[var(--border)] focus:border-[var(--accent)] focus:outline-none bg-white"
             />
             <Search
@@ -143,11 +143,11 @@ export default function Header() {
       >
         <nav className="p-6 flex flex-col gap-4">
           {[
-            { href: "/", label: "Ana Sayfa" },
-            { href: "/products", label: "Urunler" },
-            { href: "/products?category=featured", label: "One Cikanlar" },
-            { href: "/about", label: "Hakkimizda" },
-            { href: "/contact", label: "Iletisim" },
+            { href: "/", label: "Ana səhifə" },
+            { href: "/products", label: "Məhsullar" },
+            { href: "/products?category=featured", label: "Seçilmişlər" },
+            { href: "/about", label: "Haqqımızda" },
+            { href: "/contact", label: "Əlaqə" },
           ].map((link) => (
             <Link
               key={link.href}

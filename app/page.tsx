@@ -20,8 +20,8 @@ export default async function HomePage() {
         products={
           featuredProducts.length > 0 ? featuredProducts : products.slice(0, 4)
         }
-        subtitle="One Cikanlar"
-        title="En Cok Satan Urunler"
+        subtitle="Seçilmişlər"
+        title="Ən Çox Satılan Məhsullar"
       />
 
       {/* Categories */}
@@ -31,7 +31,7 @@ export default async function HomePage() {
       {newProducts.length > 0 && (
         <ProductGrid
           products={newProducts}
-          subtitle="Yeni Eklenenler"
+          subtitle="Təzə Əlavə Olunanlar"
           title="Yeni Lezzetlerimizi Kesfet"
         />
       )}
@@ -39,8 +39,8 @@ export default async function HomePage() {
       {/* All Products */}
       <ProductGrid
         products={products.slice(0, 8)}
-        subtitle="Tum Urunler"
-        title="Genis Urun Yelpazemiz"
+        subtitle="Bütün Məhsullar"
+        title="Geniş məhsul çeşidimiz"
       />
 
       {/* Features Section */}
@@ -48,32 +48,32 @@ export default async function HomePage() {
         <div className="max-w-7xl mx-auto">
           <div className="section-title">
             <span className="inline-block px-4 py-1 bg-[var(--teal)]/10 text-[var(--teal)] rounded-full text-sm font-semibold mb-4">
-              Neden Biz?
+              Niyə Biz?
             </span>
-            <h2>Osmanli Cerez Farki</h2>
-            <p>Kalite ve guvenin adresi</p>
+            <h2>Osmanlı çərəz fərqi</h2>
+            <p>Keyfiyyət və etibarın ünvanı</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: "Taze Urunler",
+                title: "Təzə məhsullar",
                 description:
-                  "Tum urunlerimiz taze olarak tedarik edilir ve hizli bir sekilde kapiniza ulastirilir.",
+                  "Bütün məhsullarımız təzə şəkildə tədarük olunur və sürətli şəkildə qapınıza çatdırılır.",
                 icon: "🌿",
                 color: "var(--teal)",
               },
               {
-                title: "Dogal ve Organik",
+                title: "Natural və Organik",
                 description:
-                  "GDO icermez, katki maddesi kullanilmaz. Dogallikta en ust kalite.",
+                  "GMO tərkibli deyil, qatqı maddələri istifadə olunmur.",
                 icon: "🌱",
                 color: "var(--gold)",
               },
               {
-                title: "Musteri Memnuniyeti",
+                title: "Müştəri Məmnuniyyəti",
                 description:
-                  "24/7 musteri destegi ve %100 memnuniyet garantisi ile hizmetinizdeyiz.",
+                  "24/7 müştəri dəstəyi və 100% məmnuniyyət zəmanəti ilə xidmətinizdəyik.",
                 icon: "⭐",
                 color: "var(--accent)",
               },

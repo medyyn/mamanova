@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 export const metadata: Metadata = {
   title: 'Osmanli Cerez - Premium Quality Nuts & Dried Fruits',
   description: 'Traditional Ottoman flavors meet modern quality. Premium nuts, dried fruits, and traditional delicacies delivered to your doorstep.',
-  keywords: 'osmanli, cerez, fistik, badem, ceviz, findik, pekmez, helva, turkish nuts',
+  keywords: 'osmanlı, çərəz, fıstıq, badam, qoz, fındıq, pəkməz, halva, türk fındığı',
 };
 
 export default function RootLayout({
